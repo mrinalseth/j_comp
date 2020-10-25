@@ -1,0 +1,47 @@
+body
+{
+    background-image: url("https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.container
+{
+    width: 40%;
+    margin-top: 50px;
+}
+.header
+{
+    color: orange;
+    text-align: center;
+    padding: 25px;
+    font-weight: 700;
+    font-size: 36px;
+}
+input
+{
+    background-color: black;
+    border: 0;
+    border-bottom: 3px solid orange;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: white;
+}
+#price
+{
+    width: 25%;
+}
+textarea
+{
+    background-color: black;
+    border: 0;
+    border-bottom: 3px solid orange;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: white;
+}
+::placeholder
+{
+    color: orange;
+}

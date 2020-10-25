@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+
+
+<p></p>
+
+<% for(var i=0;i<orders.length;i++){ %>
+
+    <% for(var j=0;j<orders[i].items.length;j++){ %>
+        <%= orders[i].items[j].item.title %> : (<%= orders[i].items[j].qty %>) * Rs<%= orders[i].items[j].item.price %> = Rs<%= orders[i].items[j].qty * orders[i].items[j].item.price %>
+        <p></p>
+    <%}%>
+    DATE: <%= orders[i].date.toDateString() %>
+    <p></p>
+    Rs<%= orders[i].cart.totalPrice %>
+    <hr>
+<%}%>

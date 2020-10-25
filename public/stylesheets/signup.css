@@ -1,0 +1,36 @@
+body
+{
+    background-image: url("https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.signup-form-group
+{
+  width: 40%;
+}
+
+.btn
+{
+    margin-left: 30%;
+    margin-top: 100px;
+    width: 50%;
+    margin-bottom: 42px;
+}
+
+.form-control 
+{
+  background-color: black;
+  width: 250%;
+  border-bottom: 3px solid orange;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0;
+}
+
+label
+{
+  color: white;
+}

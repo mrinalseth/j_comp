@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/addProduct.css">
+
+<div class="container">
+    <h3 class="header">Add New Product</h3>
+    <form action="/owner/addProduct" method="POST">
+        <div>
+            <input type="text" name="product[imagePath]" placeholder="imagePath">
+            <p></p>
+            <input type="text" name="product[title]" placeholder="title">
+            <p></p>
+            <textarea name="product[description]" placeholder="description"></textarea>
+            <p></p>
+            <input id="price" type="text" name="product[price]" placeholder="price">
+        </div>
+        <p></p>
+        <button class="btn btn-warning" >SUBMIT!</button>
+    </form>
+</div>

@@ -1,0 +1,78 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/checkout.css">
+
+<div class="container">
+    <div class="header">
+        <h1>Checkout</h1>
+        <h4>Your Total: Rs<%= total %></h4>       
+    </div>
+    <form action="/checkout" method="post">
+        <div class="row">
+            <div class="col-6">
+                <label for="card-name">Card Holder Name</label>
+                <input type="text" placeholder="Card Holder Name" id="card-name" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="card-number">Credit Card Number</label>
+                <input type="text" placeholder="Credit Card Number" id="card-number" class="form-control" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="card-expiry-month">Expiration Month</label>
+                <input type="text" placeholder="Expiration Month" id="card-expiry-month" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="card-expiry-year">Expiration Year</label>
+                <input type="text" placeholder="Expiration Year" id="card-expiry-year" class="form-control" required>
+            </div>
+        </div>
+        <div class="cvc">
+            <label for="card-cvc">CVC</label>
+            <input type="text" placeholder="CVC" id="card-cvc" class="form-control" required>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-warning">Buy now</button>
+    </form>
+</div>
+<%- include("partials/footer") %>
+
+
+
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="card-name">Card Holder Name</label>
+            <input type="text" placeholder="Card Holder Name" id="card-name" class="form-control" required>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="card-number">Credit Card Number</label>
+            <input type="text" placeholder="Credit Card Number" id="card-number" class="form-control" required>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="card-expiry-month">Expiration Month</label>
+                    <input type="text" placeholder="Expiration Month" id="card-expiry-month" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="card-expiry-year">Expiration Year</label>
+                    <input type="text" placeholder="Expiration Year" id="card-expiry-year" class="form-control" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="card-cvc">CVC</label>
+            <input type="text" placeholder="CVC" id="card-cvc" class="form-control" required>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+
+<div class="heading">
+  <h1>HOT PEPPER</h1>
+</div>
+
+<div class="content">
+  <p><a class="links btn btn-outline-primary" href="/index">All menu</a></p>
+  <% if((currentUser) && (currentUser.username == owner)){ %>
+      <p><a class="links btn btn-outline-primary" href="/owner">owner</a></p>
+  <%}%>
+  
+  <%- include("partials/footer") %>
+</div>
+
+

@@ -1,0 +1,34 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/allOrders.css">
+<% for(var i=0;i<orders.length;i++){ %>
+    NAME: <%= orders[i].user.username %> 
+    <p></p>
+    ADDRESS: <%= orders[i].user.address.country %>
+    <p></p>
+    <%= orders[i].user.address.state %>
+    <p></p>
+    <%= orders[i].user.address.city %>
+    <p></p>
+    <%= orders[i].user.address.pin %>
+    <p></p>
+    <%= orders[i].user.address.landmark %>
+    <p></p>
+    <%= orders[i].user.address.apparmentName %>
+    <p></p>
+    <%= orders[i].user.address.flatNo %>
+    <p></p>
+    <%= orders[i].cart.items.qty %>
+    <% for(var j=0;j<orders[i].items.length;j++){ %>
+        <%= orders[i].items[j].item.title %> : <%= orders[i].items[j].qty %> * <%= orders[i].items[j].item.price %> = <%= orders[i].items[j].qty *  orders[i].items[j].item.price %>
+        <p></p>
+    <%}%>
+    DATE: <%= orders[i].date.toDateString() %>
+    <p></p>
+    TOTAL PRICE: <%= orders[i].cart.totalPrice %>
+    <hr>
+<%}%>
+
+<%- include("partials/footer") %>
+
+

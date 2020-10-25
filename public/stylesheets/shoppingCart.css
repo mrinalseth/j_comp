@@ -1,0 +1,67 @@
+body
+{
+    background-image: url("https://images.unsplash.com/photo-1510442590145-1ea52d75f1c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.msg
+{
+    margin: 50px auto;
+    color: white;
+    padding: 100px;
+    background-color: black;
+    font-size: 72px;
+    opacity: 50%;
+}
+
+.details
+{
+    margin: 100px auto;
+    width: 60%;
+}
+.list-group-item
+{
+    color: white;
+    background-color: black;
+    margin-bottom: 15px;
+}
+.icons .fa
+{
+    color: white;
+    padding-right: 25px;
+}
+
+.icons
+{
+    margin-left: 25px;
+}
+
+.h3, h3 {
+    font-size: 3rem;
+}
+
+.total
+{
+    background-color: black;
+    opacity: 50%;
+    color: orange;
+    margin: 0 auto;
+    font-size: 36px;
+    padding: 15px;
+}
+.button
+{
+    color: white;
+    margin: 0 auto;
+    font-size: 36px;
+    padding: 50px;
+
+}
+.btn
+{
+    font-weight: 500;
+    color: black;
+    margin-top: 43px;
+    margin-bottom: 35px;
+}

@@ -1,0 +1,56 @@
+body
+{
+    background-image: url("https://images.pexels.com/photos/3815830/pexels-photo-3815830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.header
+{
+    color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    width: 35%;
+    text-align: center;
+    font-weight: 800;
+}
+
+form
+{
+    color: white;
+    border: 2px solid orange;
+    padding: 10px;
+    margin-bottom: 25px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 118px;
+}
+
+
+.form-control
+{
+    background-color: black;
+    border-bottom: 3px solid orange;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0;
+}
+
+button
+{
+    margin-left: 42.125%;
+    margin-top: 25px;
+}
+
+.row
+{
+    padding: 15px;
+}
+
+.cvc
+{
+    width: 50%;
+    padding: 15px;
+}

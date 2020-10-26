@@ -1,16 +1,25 @@
 <%- include("../partials/header") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
 
 
-<p></p>
-
-<% for(var i=0;i<orders.length;i++){ %>
-
-    <% for(var j=0;j<orders[i].items.length;j++){ %>
-        <%= orders[i].items[j].item.title %> : (<%= orders[i].items[j].qty %>) * Rs<%= orders[i].items[j].item.price %> = Rs<%= orders[i].items[j].qty * orders[i].items[j].item.price %>
-        <p></p>
+<div class="container">
+    <% for(var i=0;i<orders.length;i++){ %>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <% for(var j=0;j<orders[i].items.length;j++){ %>
+                        <%= orders[i].items[j].item.title %> : (<%= orders[i].items[j].qty %>) * Rs<%= orders[i].items[j].item.price %> = Rs<%= orders[i].items[j].qty * orders[i].items[j].item.price %>
+                        <p></p>
+                    <%}%>
+                    DATE: <%= orders[i].date.toDateString() %>
+                    <p></p>
+                    <span class="total">Rs<%= orders[i].cart.totalPrice %></span>
+                </div>
+              </div>
+        </div>
     <%}%>
-    DATE: <%= orders[i].date.toDateString() %>
-    <p></p>
-    Rs<%= orders[i].cart.totalPrice %>
-    <hr>
-<%}%>
+</div>
+
+
+
+

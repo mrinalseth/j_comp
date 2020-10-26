@@ -8,9 +8,10 @@
 <div class="content">
   <p><a class="links btn btn-outline-primary" href="/index">All menu</a></p>
   <% if((currentUser) && (currentUser.username == owner)){ %>
-      <p><a class="links btn btn-outline-primary" href="/owner">owner</a></p>
+      <p><a class="links btn btn-outline-primary" href="/owner/addProduct">Add Product</a></p>
+      <p><a class="links btn btn-outline-primary" href="/owner/allOrders">All Orders</a></p>
   <%}%>
-  
+   
   <%- include("partials/footer") %>
 </div>
 

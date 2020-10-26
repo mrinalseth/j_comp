@@ -12,6 +12,7 @@ var mongoStore = require("connect-mongo")(session);
 var Cart = require("./models/cart");
 var Order = require("./models/order");
 var flash = require('connect-flash');
+var methodOverride=require("method-override");
 
 
 app.set("view engine","ejs");
@@ -50,7 +51,7 @@ app.use(function(req,res,next){
     next();
 });
 
-
+app.use(methodOverride("_method"));
 
 
 app.get("/",function(req,res){
@@ -223,6 +224,20 @@ app.get("/owner",isLoggedInAndIsOwner,function(req,res){
 app.get("/owner/addProduct",function(req,res){
     res.render("addProduct");
 });
+app.delete('/index/:id',isLoggedInAndIsOwner,function(req,res){
+    Product.findByIdAndDelete(req.params.id,function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            console.log('HACKED');
+            res.redirect('/index');
+        }
+    });
+});
+
 app.post("/owner/addProduct",function(req,res){
     Product.create(req.body.product,function(err,createrProduct){
         if(err)
@@ -232,7 +247,7 @@ app.post("/owner/addProduct",function(req,res){
         else
         {
             req.flash('success','Added into menu');
-            res.redirect("/owner");
+            res.redirect("/");
         }
     })
 });

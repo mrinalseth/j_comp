@@ -16,6 +16,11 @@
                         <div>
                             <div class="price pull-left">Rs <%= product[i].price %></div>
                             <a href="/add-to-cart/<%=product[i]._id  %>" class="pull-right btn btn-warning">Add to Cart</a>
+                            <% if((currentUser)&&(currentUser.username==owner)){ %>
+                              <form action="/index/<%= product[i]._id %>?_method=DELETE" method="POST">
+                                <button class="pull-right btn btn-warning">delete</button>
+                              </form>
+                            <%}%>
                         </div>
                       </div>
                     </div>
@@ -24,7 +29,7 @@
         <%}%>
     </div>
 </div>
- 
+  
 <%- include("partials/footer") %>
 
 
